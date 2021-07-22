@@ -7,8 +7,9 @@ pipeline {
           image 'maven:3.6.3-jdk-11-slim'
    
         }
-      when { branch 'master' }
+      
       }
+      when { branch 'master' }
       steps {
         echo 'compile'
         sh 'mvn compile'
@@ -21,8 +22,9 @@ pipeline {
           image 'maven:3.6.3-jdk-11-slim'
       
         }
-      when { branch 'master' }
+      
       }
+      when { branch 'master' }
       steps {
         echo 'testing'
         sh 'mvn clean test'
