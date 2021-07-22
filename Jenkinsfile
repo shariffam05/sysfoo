@@ -59,12 +59,6 @@ pipeline {
 
       }
     }
-
-  }
-  tools {
-    maven 'Maven 3.6.3'
-  }
-
     stage('Deploy to Dev') {
       when {
              beforeAgent true
@@ -78,6 +72,12 @@ pipeline {
         sh 'docker-compose up -d'
       }
     }
+  }
+  tools {
+    maven 'Maven 3.6.3'
+  }
+
+
   post {
     always {
       echo 'This pipeline is completed..'
